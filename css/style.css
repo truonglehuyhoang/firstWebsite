@@ -1,5 +1,5 @@
-
-.skip-link{
+/* Base Styles (Apply to all devices) */
+.skip-link {
     position: absolute;
     top: -40px;
     left: 0;
@@ -12,11 +12,11 @@
     transition: top 0.3s;
 }
 
-.skip-link:focus{
+.skip-link:focus {
     top: 10px;
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -24,23 +24,23 @@ nav ul{
     padding: 0;
 }
 
-nav ul li{
+nav ul li {
     margin: 0 10px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     padding: 10px;
     display: block;
 }
 
 nav ul li a:hover,
-nav ul li a:focus{
+nav ul li a:focus {
     background-color: white;
     border-radius: 4px;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
     display: grid;
@@ -49,55 +49,105 @@ body{
     margin: 0;
 }
 
-header{
+header {
     font-family: fantasy;
     font-size: 25px;
 }
 
-header,footer{
+header, footer {
     background-color: #f0f0f0;
     text-align: center;
     padding: 10px;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
-section{
+section {
     max-width: 800px;
     width: 100%;
     text-align: center;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-section ul{
+section ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-img{
+img {
     display: block;
     margin: 20px auto;
     width: 100%;
     max-width: 600px;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-footer{
+footer {
     font-size: 0.9rem;
     background-color: #fcd1d7;
     color: black;
     padding: 10px;
 }
 
+/* Responsive Styles */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack nav items */
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Reduce spacing for smaller screens */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    section {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    html {
+        font-size: 12px; /* Smaller base font size */
+    }
+
+    nav ul {
+        text-align: center;
+        background-color: #fcd1d7; /* Ensure nav fits well on small screens */
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%; /* Prevent image overflow */
+    }
+}
