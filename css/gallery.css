@@ -85,6 +85,21 @@ img{
       color: #f0e68c; /* Light yellowish color */
     }
 }
+
+footer {
+    font-size: 0.8rem; /* Smaller text for footer */
+    text-align: center; /* Center-align text */
+    color: yellow; /* Text color */
+    padding: 10px 5px; /* Add smaller padding for mobile devices */
+}
+
+@media (max-width: 480px) {
+    footer {
+        font-size: 0.7rem; /* Even smaller font size for very small screens */
+        padding: 8px 3px; /* Adjust padding for small screens */
+    }
+}
+
   
   
   
