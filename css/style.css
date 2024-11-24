@@ -1,21 +1,19 @@
 /* Base Styles (Apply to all devices) */
-body {
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-    margin: 0;
-    color: #333; /* Subtle color for readability */
-    background-color: #fffdf9; /* Light background for a softer look */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+    text-align: center;
+    border-radius: 4px;
+    transition: top 0.3s;
 }
 
-header h1 {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #d23669; /* Eye-catching color for the header */
-    margin: 0;
+.skip-link:focus {
+    top: 10px;
 }
 
 nav ul {
@@ -26,22 +24,40 @@ nav ul {
     padding: 0;
 }
 
+nav ul li {
+    margin: 0 10px;
+}
+
 nav ul li a {
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
     text-decoration: none;
     padding: 10px;
     display: block;
-    color: #333;
-    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
     background-color: white;
-    color: #d23669; /* Add hover color for interactivity */
     border-radius: 4px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    font-family: fantasy;
+    font-size: 25px;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
 }
 
 main {
@@ -60,8 +76,6 @@ section {
     margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #4a4a4a; /* Slightly muted color for section text */
 }
 
 section ul {
@@ -81,12 +95,10 @@ img {
 }
 
 footer {
-    font-family: Tahoma, Arial, sans-serif;
     font-size: 0.9rem;
     background-color: #fcd1d7;
     color: black;
     padding: 10px;
-    font-weight: bold;
 }
 
 /* Responsive Styles */
@@ -112,7 +124,7 @@ footer {
     }
 
     header h1 {
-        font-size: 1.8rem; /* Adjust font size for smaller screens */
+        font-size: 20px; /* Adjust font size for smaller screens */
     }
 
     footer {
