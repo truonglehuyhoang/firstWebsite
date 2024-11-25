@@ -151,3 +151,16 @@ footer {
         max-width: 100%; /* Prevent image overflow */
     }
 }
+
+footer i {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+footer i:hover {
+    color: #fcd1d7;
+}
+
+
